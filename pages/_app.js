@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 function MyApp() {
 
   const [dp, setDp] = useState()
+  const [thumb, setThumb] = useState()
 
   const [fname, setfName] = useState(NameList[Math.round(Math.random() * NameList.length)]);
   const [fullName, setfullName] = useState('')
@@ -54,6 +55,7 @@ function MyApp() {
   }
 
   useEffect(() => {
+    setThumb("https://thispersondoesnotexist.com/favicon.png")
     setDp("https://thispersondoesnotexist.com/image")
     setfName(fname);
     if ((fname + ' ' + lname + ' ' + surName).length > 18) {
@@ -83,6 +85,7 @@ function MyApp() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>ONLY IDENTITY</title>
+        <link rel="icon" type='image/png' href={thumb} />
         <meta name="description" content="Fake Profiles Generator" />
       </Head>
       <div className="master-container">
@@ -182,7 +185,7 @@ function MyApp() {
         </div>
       </div>
       <div className="buttons">
-        <button onClick={()=> {SavePdf()}} className='save-pdf'>DOWNLOAD PDF</button>
+        <button onClick={() => { SavePdf() }} className='save-pdf'>DOWNLOAD PDF</button>
         <button onClick={() => { router.reload(window.location.pathname) }} className='next-profile'>NEXT PROFILE >></button>
       </div>
     </>

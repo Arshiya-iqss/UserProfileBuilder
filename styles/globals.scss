@@ -300,6 +300,10 @@
           width: 3rem;
           margin: 0 2.5%;
         }
+
+        h1 {
+          font-size: 1.75rem;
+        }
       }
 
       .section-1 {
@@ -393,6 +397,10 @@
           width: 3rem;
           margin: 0 2.5%;
         }
+
+        h1 {
+          font-size: 1.75rem;
+        }
       }
       .section-1 {
         display: flex;
@@ -476,6 +484,8 @@
     }
   }
 }
+
+// SAVE PDF STYLES
 
 @media print {
   .master-container {
