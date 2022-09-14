@@ -137,7 +137,6 @@ function MyApp() {
           </div>
 
 
-
           <div suppressHydrationWarning style={{ backgroundImage: `url(${`https://countryflagsapi.com/png/${citizenOf}`})`, backgroundSize: '' }} className="card-back">
             <div className="backdrop">
               <div className="citizen-of">
