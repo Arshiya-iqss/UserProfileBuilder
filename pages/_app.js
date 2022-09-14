@@ -77,7 +77,6 @@ function MyApp() {
 
   return (
     <>
-      <font src="../fonts/Raynoss-gxvp4.ttf"></font>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>ONLY IDENTITY</title>
@@ -115,7 +114,7 @@ function MyApp() {
               </div>
               <div className="section-2">
                 <div className="signature">
-                  <h2 suppressHydrationWarning >{fname}</h2>
+                  <h2 suppressHydrationWarning >{fname}.</h2>
                 </div>
                 <div className="fields-2">
 
