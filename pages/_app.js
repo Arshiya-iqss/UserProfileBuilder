@@ -49,6 +49,9 @@ function MyApp() {
 
   const randomCunt = Math.round(Math.random() * Countries.length)
 
+  const SavePdf = () => {
+    window.print()
+  }
 
   useEffect(() => {
     setDp("https://thispersondoesnotexist.com/image")
@@ -179,7 +182,7 @@ function MyApp() {
         </div>
       </div>
       <div className="buttons">
-        <button className='save-pdf'>DOWNLOAD PDF</button>
+        <button onClick={()=> {SavePdf()}} className='save-pdf'>DOWNLOAD PDF</button>
         <button onClick={() => { router.reload(window.location.pathname) }} className='next-profile'>NEXT PROFILE >></button>
       </div>
     </>
