@@ -188,6 +188,9 @@ function MyApp() {
         <button onClick={() => { SavePdf() }} className='save-pdf'>DOWNLOAD PDF</button>
         <button onClick={() => { router.reload(window.location.pathname) }} className='next-profile'>NEXT PROFILE >></button>
       </div>
+      <div className="footer">
+        <p>THIS WEB APP IS DEVELOPED AND OWNED BY <a href='https://www.linkedin.com/in/haseebqureshiishere/'>HASEEB QURESHI</a></p>
+      </div>
     </>
   )
 }
