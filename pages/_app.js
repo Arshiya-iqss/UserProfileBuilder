@@ -50,9 +50,10 @@ function MyApp() {
 
   const randomCunt = Math.round(Math.random() * Countries.length)
 
-  const onReload= () => {
+
+  const onReload = () => {
     router.reload(window.location.pathname);
-    window.scrollTo({top:0, behavior:'smooth'});
+    // window.scrollTo({top:0, behavior:'smooth'});
   }
 
   const SavePdf = () => {
@@ -60,6 +61,7 @@ function MyApp() {
   }
 
   useEffect(() => {
+    const scrollTo = window.scrollTo({ top: 0, behavior: 'smooth' });
     setThumb("https://thispersondoesnotexist.com/favicon.png")
     setDp("https://thispersondoesnotexist.com/image")
     setfName(fname);
@@ -91,7 +93,7 @@ function MyApp() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>ONLY IDENTITY</title>
         <link rel="icon" type='image/png' href={thumb} />
-        <meta name="description" content="Fake Profiles Generator" />
+        <meta name="description" content="Only Profiles, Generate and Save Unlimited Fake Profiles." />
       </Head>
       <div className="master-container fade">
         <div className="logo">
@@ -187,7 +189,7 @@ function MyApp() {
       </div>
       <div className="buttons fade">
         <button onClick={() => { SavePdf() }} className='save-pdf'>DOWNLOAD PDF</button>
-        <button onClick={() => onReload() } className='next-profile'>NEXT PROFILE >></button>
+        <button onClick={() => onReload()} className='next-profile'>NEXT PROFILE >></button>
       </div>
       <div className="footer fade">
         <p>THIS WEB APP IS DEVELOPED AND OWNED BY <a href='https://www.linkedin.com/in/haseebqureshiishere/'>HASEEB QURESHI</a></p>
