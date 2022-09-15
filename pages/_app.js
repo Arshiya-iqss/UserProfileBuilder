@@ -1,8 +1,8 @@
-import '../styles/globals.scss'
 import Head from 'next/head'
-import { NameList, LastNames, professionList, Countries } from '../resources/resources'
-import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import { Countries, LastNames, NameList, professionList } from '../resources/resources'
+import '../styles/globals.scss'
 
 function MyApp() {
 
@@ -35,7 +35,7 @@ function MyApp() {
 
   const SpouseName = NameList[Math.round(Math.random() * NameList.length)];
 
-  const genderList = ['Male', 'Female', 'Transgender', 'Neutral'];
+  const genderList = ['Male', 'Male', 'Male', 'Female', 'Female', 'Neutral'];
 
   const colorList = ['LIGHT', 'FARE', 'TAN', 'DARK']
 
@@ -49,6 +49,11 @@ function MyApp() {
   const year = Math.round(Math.random() * (2000 - 1970 + 1) + 1970);
 
   const randomCunt = Math.round(Math.random() * Countries.length)
+
+  const onReload= () => {
+    router.reload(window.location.pathname);
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
 
   const SavePdf = () => {
     window.print()
@@ -88,7 +93,7 @@ function MyApp() {
         <link rel="icon" type='image/png' href={thumb} />
         <meta name="description" content="Fake Profiles Generator" />
       </Head>
-      <div className="master-container">
+      <div className="master-container fade">
         <div className="logo">
           <h1>ONLY <span>IDENTITY</span></h1>
         </div>
@@ -174,21 +179,17 @@ function MyApp() {
                     <h6>EDUCATION INSTITUTE ATTENDED</h6>
                     <h3>UNIVERSITY OF {state2}</h3>
                   </div>
-                  {/* <div className="ssn">
-                    <h6>SSN</h6>
-                    <h3>{ssn}</h3>
-                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="buttons">
+      <div className="buttons fade">
         <button onClick={() => { SavePdf() }} className='save-pdf'>DOWNLOAD PDF</button>
-        <button onClick={() => { router.reload(window.location.pathname) }} className='next-profile'>NEXT PROFILE >></button>
+        <button onClick={() => onReload() } className='next-profile'>NEXT PROFILE >></button>
       </div>
-      <div className="footer">
+      <div className="footer fade">
         <p>THIS WEB APP IS DEVELOPED AND OWNED BY <a href='https://www.linkedin.com/in/haseebqureshiishere/'>HASEEB QURESHI</a></p>
       </div>
     </>
