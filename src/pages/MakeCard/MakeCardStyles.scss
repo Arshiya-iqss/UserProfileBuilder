@@ -1,0 +1,101 @@
+.cardContainer {
+  width: 76%;
+  padding: 25px 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8dfd4;
+
+  .formContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .uploadImage {
+      object-fit: cover;
+    }
+    .fileUpload {
+      border-radius: 100%;
+      // background-color: lightgrey;
+      .uploadImage {
+        width: 120px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .uploadImagePlaceholder {
+        width: 120px;
+        aspect-ratio: 1;
+        object-fit: contain;
+        padding: 25px;
+      }
+    }
+
+    .fieldItems {
+      width: 100%;
+      display: flex;
+      gap: 28px;
+      margin-top: 20px;
+
+      .inputLine {
+        width: 100%;
+        .selectField {
+          padding: 10px 0px;
+          border-radius: 5px;
+          border: none;
+          width: 100%;
+        }
+        label {
+          color: rgb(111, 111, 111);
+          font-weight: 600;
+          font-size: small;
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          margin-right: 10px;
+          padding: 10px 25px 10px 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .submitButton {
+      margin-top: 50px;
+      width: 160px;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.749);
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cardContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+
+    .formContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .fieldItems {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

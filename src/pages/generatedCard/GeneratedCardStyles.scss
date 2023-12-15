@@ -1,0 +1,172 @@
+.generatedCardDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  text-transform: capitalize;
+
+  .box {
+    width: 36%;
+    min-height: 45vh;
+    border-radius: 10px;
+    padding: 6px 34px 2px 34px;
+    background-size: cover;
+    background-position: center center;
+    background-color: #f8dfd4;
+    background-blend-mode: soft-light;
+
+    p {
+      font-weight: 600;
+      font-size: small;
+      color: #186f65;
+    }
+    h5 {
+      font-size: larger;
+    }
+
+    .flag {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .flagImg {
+        border: none;
+        width: 60px;
+        aspect-ratio: 2;
+        object-fit: cover;
+      }
+    }
+
+    .cardDetails1 {
+      width: 100%;
+      padding: 20px 0px;
+      display: flex;
+      gap: 1rem;
+      margin-top: -12px;
+      .LogoImg {
+        img {
+          width: 130px;
+          aspect-ratio: 1;
+          border: 3px solid rgb(255, 255, 255);
+          object-fit: cover;
+        }
+      }
+      .section1 {
+        width: 100%;
+        .name {
+          margin-bottom: 16px;
+        }
+
+        .section2 {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .cardDetails2 {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+
+      .address {
+        text-transform: capitalize;
+      }
+
+      .sign h1 {
+        rotate: -20deg;
+        font-family: "Ms Madi" !important;
+      }
+
+      .afterSign {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .cardDetails3 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .generatedCardDiv {
+    margin: 20px 0px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+      width: 100%;
+      height: 25vh;
+
+      p {
+        font-weight: 600;
+        font-size: small;
+        color: #186f65;
+      }
+      h5 {
+        font-size: medium;
+      }
+      .flag {
+        font-size: small;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .generatedCardDiv {
+    margin: 20px 0px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+      width: 100%;
+      height: 52vh;
+      p {
+        font-weight: 600;
+        font-size: 10px;
+        color: #186f65;
+      }
+      h5 {
+        font-size: small;
+      }
+      .flag {
+        width: 100%;
+        display: flex;
+        .flagImg {
+          width: 30px;
+        }
+        h1 {
+          font-size: medium;
+        }
+      }
+      .cardDetails1 {
+        display: flex;
+        flex-direction: column;
+        .LogoImg {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .cardDetails2 {
+        display: flex;
+        gap: 2rem;
+        .sign h1 {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}

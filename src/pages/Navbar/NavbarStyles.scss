@@ -1,0 +1,28 @@
+.nav {
+  background-color: #c69774;
+  width: 100%;
+  padding: 2px 14px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdfButton {
+  .savePdf {
+    padding: 8px 20px;
+    color: white;
+    background-color: #265073;
+    border: none;
+    border-radius: 20px;
+    &:hover {
+      scale: 1.1 1;
+      transition: all 0.5s;
+    }
+    &:not(:hover) {
+      scale: 1;
+      transition: all 0.5s;
+    }
+  }
+}
